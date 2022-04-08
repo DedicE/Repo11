@@ -1,15 +1,10 @@
-// Create an array here
-var myArr = [2, 4, 0, 8, 10]; 
-// End of creating an array
+var myArr = [2, 4, 0, 8, 10];
 
-// Create a function below this line
-function myArrayFunction(myItems){
-    var myItems = myArr;
-    myArr [2] = 6;
+function myArrayFunction(myItems) {
+    myItems[2] = 6;
     return myItems;
 }
 
-myArrayFunction();
-console.log(myArrayFunction());
-// End of creating a function
+console.log(myArrayFunction(myArr));
+
 module.exports = myArrayFunction;

@@ -1,16 +1,23 @@
-// Only change code below this code
 var myStr = "Paragon is the best!";
-function useMethods(str){
-    var myReverse = str.split("");
-    myReverse = myReverse.reverse();
-    myReverse = myReverse.join("");
-    var nova = myReverse;
-    nova = nova.split(" ");
-    var countCharacters = nova.map(x => x.length);
-    return [myReverse, countCharacters];
+
+function useMethods(str) {
+
+    var myReverse;
+    var countCharacters;
+
+    var words = str.split(" ");
+
+    words = words.reverse();
+
+    countCharacters = words.map((y) => y.length);
+
+    words = words.map((z) => z.split("").reverse().join(""));
+
+    myReverse = words.join(" ");
+
+    return { myReverse, countCharacters };
 }
 
 console.log(useMethods(myStr));
-// Only change code above this code
-module.exports = useMethods;
 
+module.exports = useMethods;
